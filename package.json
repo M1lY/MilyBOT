@@ -10,9 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3": "^5.4.0",
+    "bufferutil": "^4.0.1",
     "discord.js": "^11.4.2",
+    "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^4.0.0",
+    "node-gyp": "^3.8.0",
     "opusscript": "0.0.6",
+    "rebuild": "^0.1.2",
     "yt-search": "^0.4.1",
     "ytdl-core": "^0.29.1"
   }
