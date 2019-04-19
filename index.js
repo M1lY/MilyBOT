@@ -187,7 +187,7 @@ client.on('message', msg => {
 			return;
 		}
 		server.dispatcher.setVolume(getVolume());
-		msg.channel.send("Odtwarzam - **" + title + "** " + url);
+		msg.channel.send("Odtwarzam - **" + title + "**");
 	}
 
 	if (command === "pause" || command === "stop"){
