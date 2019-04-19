@@ -15,6 +15,9 @@ var desc="";
 
 global.servers = {};
 
+server.listen({ port: process.env.PORT || 8000 }).then(({ url }) => { 
+console.log(`Server ready at ${url}`); });
+
 client.on('ready', () => {
 
 	const table = sql.prepare("SELECT count(*) FROM sqlite_master WHERE type='table' AND name = 'data';").get();
