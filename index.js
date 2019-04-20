@@ -1,3 +1,4 @@
+// "ffmpeg-binaries": "^4.0.0",
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = './config.json'
@@ -166,7 +167,7 @@ client.on('message', msg => {
 	function play(url, title){
 		let data = client.getData.get(msg.guild.id);
 		if(!data) defaultDB(data);
-		
+
 		var server = servers[msg.guild.id];
 		if(!server.dispatcher.speaking){
 			console.log(url);
