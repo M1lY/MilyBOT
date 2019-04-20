@@ -166,6 +166,7 @@ client.on('message', msg => {
 	function play(url, title){
 		let data = client.getData.get(msg.guild.id);
 		if(!data) defaultDB(data);
+		console.log(url);
 
 		var server = servers[msg.guild.id];
 		if(!server.dispatcher.speaking){
