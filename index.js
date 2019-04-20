@@ -188,7 +188,7 @@ client.on('message', msg => {
 		}
 		server.dispatcher.setVolume(getVolume());
 		msg.channel.send("Odtwarzam - **" + title + "**");
-	}
+	} 
 
 	if (command === "pause" || command === "stop"){
 		if (msg.member.voiceChannel){
