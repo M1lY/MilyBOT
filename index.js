@@ -469,7 +469,7 @@ client.on('message', msg => {
 				msg.reply("Kanały między którymi użytkownik będzie przenoszony podczas \"budzenia\" nie zostały jeszcze ustawione");
 				return;
 			}else{
-				msg.reply("Kanały między którymi użytkownik będzie przenoszony podczas \"budzenia\" to: **" + getMoveCH1() + "**, **" + getMoveCH2() + "**");
+				msg.reply("Kanały między którymi użytkownik będzie przenoszony podczas \"budzenia\" to: **" +  msg.guild.channels.find(x => x.id === getMoveCH1()).name + "**, **" +  msg.guild.channels.find(x => x.id === getMoveCH2()).name + "**");
 				return;
 			}
 		}
