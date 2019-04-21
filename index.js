@@ -463,14 +463,15 @@ client.on('message', msg => {
 		let data = client.getData.get(msg.guild.id);
 		if (!data) defaultDB(data);
 
-		if (getMoveCH1() == "" || getMoveCH2() == "") {
-			msg.reply("Kanały między którymi użytkownik będzie przenoszony podczas \"budzenia\" nie zostały jeszcze ustawione");
-			return;
-		}
-
+		
 		if (!args[0] || !args[1]) {
-			msg.reply("Kanały między którymi użytkownik będzie przenoszony podczas \"budzenia\" to: **" + getMoveCH1() + "**, **" + getMoveCH2() + "**");
-			return;
+			if (getMoveCH1() == "" || getMoveCH2() == "") {
+				msg.reply("Kanały między którymi użytkownik będzie przenoszony podczas \"budzenia\" nie zostały jeszcze ustawione");
+				return;
+			}else{
+				msg.reply("Kanały między którymi użytkownik będzie przenoszony podczas \"budzenia\" to: **" + getMoveCH1() + "**, **" + getMoveCH2() + "**");
+				return;
+			}
 		}
 
 		const CH1 = msg.guild.channels.find(x => x.type === "voice" && x.position === parseInt(args[0] - 1));
