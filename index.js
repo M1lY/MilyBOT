@@ -43,7 +43,7 @@ client.on('message', msg => {
 	if (command === "obudź") {
 		let data = client.getData.get(msg.guild.id);
 		if(!member || !args[1] || !isNaN(args[0])){
-			msg.reply("Żeby kogoś obudź wpisz: !obudź <@nick> <ilość przeniesień>");
+			msg.reply("Żeby kogoś obudzić wpisz: !obudź <@nick> <ilość przeniesień>");
 			return;
 		}
 		if(!data) defaultDB(data);
