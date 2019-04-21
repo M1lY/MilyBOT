@@ -8,6 +8,8 @@ firebase-debug.log*
 
 *.tmp
 package-lock.json
+data.sqlite-shm
+data.sqlite-wal
 
 # Firebase cache
 .firebase/
