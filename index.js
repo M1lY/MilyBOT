@@ -1,6 +1,7 @@
 // "ffmpeg-binaries": "^4.0.0",
 const Discord = require('discord.js');
 const client = new Discord.Client();
+require('dotenv').config();
 const config = './config.json'
 const ytdl = require('ytdl-core');
 const fs = require('fs');
@@ -176,6 +177,8 @@ client.on('message', msg => {
 	function play(url, title) {
 		let data = client.getData.get(msg.guild.id);
 		if (!data) defaultDB(data);
+		console.log(url);
+		console.log(title);
 
 		var server = servers[msg.guild.id];
 		if (!server.dispatcher.speaking) {
