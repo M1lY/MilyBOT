@@ -561,6 +561,4 @@ client.on('message', msg => {
 	}
 });
 
-
-
-client.login(JSON.parse(fs.readFileSync("./token.json")).token);
+client.login(process.env.TOKEN);
